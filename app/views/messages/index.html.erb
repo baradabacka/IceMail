@@ -2,12 +2,6 @@
 
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
-<% if user_signed_in? %>
-    <span>Здравствуйте, <%= current_user.email %></span>
-    <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
-<% else %>
-    <%= link_to 'Войти', new_user_session_path %> или <%= link_to 'Зарегистрироваться', new_user_registration_path %>
-<% end %>
 
 
 <table>
@@ -32,6 +26,15 @@
 
 </table>
 
+<%= link_to 'Создать новое сообщение', new_message_path %>
+
 <br />
 
-<%= link_to 'New Message', new_message_path %>
+
+
+<% if user_signed_in? %>
+    <span>Здравствуйте, <%= current_user.email %></span>
+    <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
+<% else %>
+    <%= link_to 'Войти', new_user_session_path %> или <%= link_to 'Зарегистрироваться', new_user_registration_path %>
+<% end %>
