@@ -5,9 +5,34 @@
   table{
     border-collapse: collapse;
   }
-.list_all {
-  width: 60%;
-  height: 60%;
-}
+  table tr td {
+    padding: 5px;
+    vertical-align: top;
+  }
+  .list_email {
+    width: 500px;
+    height: 70px;
+  }
+
+
+  dl{
+    margin: 0;
+  }
+  dt {
+    color: #244;
+    font-weight: bold;
+    font-size: larger;
+  }
+  dd{
+    margin: 0;
+  }
+  .list_actions {
+    font-size: x-small;
+    text-align: right;
+    padding-left: 1em;
+  }
+  .list_line {
+    background: yellow;
+  }
 
 }

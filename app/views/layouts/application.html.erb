@@ -6,8 +6,13 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
 
+<body class='<%= controller.controller_name %>'>
+  <div id="banner">
+    <!-- <%= image_tag("index.png") %> -->
+    <%= @page_title || "Список Писем" %>
+
+  </div>
 <%= yield %>
 
 </body>
